@@ -65,7 +65,7 @@ You need to run both the FastAPI backend and the Streamlit frontend.
 ### 1. Start the API Server
 Open a terminal and run the FastAPI server:
 ```bash
-uvicorn api:app --host 0.0.0.0 --port 8000 --reload
+uv run python -m uvicorn api:app --port 8000 --reload
 ```
 *The API will be available at `http://localhost:8000`.*
 

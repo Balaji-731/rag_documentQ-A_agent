@@ -39,6 +39,15 @@ class QuestionRequest(BaseModel):
 class TTSRequest(BaseModel):
     text: str
 
+
+@app.get("/")
+def root():
+    return {
+        "status": "running",
+        "message": "RAG Agent API is running"
+    }
+
+
 @app.post("/upload")
 async def upload_files(files: List[UploadFile] = File(...)):
     results=[]
